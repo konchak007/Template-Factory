@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import React from "react";
+import "./App.css";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
-import { Search } from './pages';
+import { Search } from "./pages";
 
 function App() {
   return (
