@@ -1,7 +1,10 @@
-import { createStore } from 'redux';
-import RootReducer from '';
+import { createStore, applyMiddleware } from 'redux';
+import Logger from 'redux-logger';
+ import RootReducer from './reducers';
 
-const store = createStore(RootReducer);
+const store = createStore(RootReducer, applyMiddleware(Logger));
 
-export default store
+store.dispatch({type: 'actions/MARIYKA'})
+
+export default store;
 
