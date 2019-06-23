@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { fetchOrganisationByName } from "../../actions/organisations";
 import OrganisationInfo from "../../components/OrganisationInfo";
-import { Spinner } from 'reactstrap';
+import { Spinner } from "reactstrap";
 
 class Organization extends React.Component {
   componentDidMount() {
@@ -11,9 +11,7 @@ class Organization extends React.Component {
 
     fetchOrganisationByName(name);
   }
-  componentWillUnmount() {
-
-  }
+  componentWillUnmount() {}
   render() {
     const { isLoading, data } = this.props;
 
@@ -37,4 +35,7 @@ const mapDispatchToProps = {
   fetchOrganisationByName
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(Organization);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Organization);

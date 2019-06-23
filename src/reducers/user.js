@@ -1,19 +1,18 @@
-import * as types from '../actions/users/types';
-
+import * as types from "../actions/users/types";
 
 const initialState = {
-  user : []
-}
+ data: null
+};
 
-const UserReducer= (state=initialState,action)=>{
- switch(action.types){
-   case types.SET_USER :
-   return {
-     ...state,
-     user :action. payload
-   }
- }
- return state
-}
+const UserReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case types.SET_USER:
+      return {
+        ...state,
+        data: action.payload
+      };
+  }
+  return state;
+};
 
-export default UserReducer
+export default UserReducer;
