@@ -11,3 +11,28 @@ export const fetchOrganisationsByQueryService = async (qwery = "") => {
     return [];
   }
 };
+
+export const fetchOrganisationMembersByNameService = async (name) => {
+  try {
+    const response = await axios(
+      `https://api.github.com/orgs/${name}/members`
+    );
+    return response.data;
+  } catch (error) {
+    return [];
+  }
+};
+
+export const fetchOrganisationByNameService = async (name) => {
+  try {
+    const response = await axios(
+      `https://api.github.com/orgs/${name}`
+    );
+    const organisationData =  response.data;
+    organisationData.members = await fetchOrganisationMembersByNameService(name);
+
+    return organisationData;
+  } catch (error) {
+    return null;
+  }
+};

@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const OrganizationCard = ({ id, name, avatar }) => {
+const OrganizationCard = ({  name, avatar }) => {
   return (
-    <Link to={`/organisation/${id}`}>
+    <Link to={`/organisation/${name}`}>
       <div>
         <img src={avatar} width="100px" height="100px" />
         {name}
