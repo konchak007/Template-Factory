@@ -4,7 +4,5 @@ import Logger from 'redux-logger';
 
 const store = createStore(RootReducer, applyMiddleware(Logger));
 
-store.dispatch({type: 'actions/MARIYKA'})
-
 export default store;
 
