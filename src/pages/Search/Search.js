@@ -1,14 +1,28 @@
 import React from 'react';
 import {DelayInput} from 'react-delay-input';
+import { connect } from 'react-redux';
 
-const Search = ()=> (
+import OrganisationsList from '../../components/OrganisationsList';
+
+import {fetchDataByQuery} from '../../actions/organisations'
+
+const Search = (props)=> (
   <div>
     <DelayInput
       minLength={2}
       delayTimeout={500}
-      onChange={event => console.log(event)}
+      onChange={event => props.fetchDataByQuery(event.target.value)}
     />
+    <OrganisationsList organisations={props.organisations} />
   </div>
 )
 
-export default Search;
+const mapStateToProps = state => ({
+  organisations: state.organisations.data
+})
+
+const mapDispatchToProps = {
+  fetchDataByQuery
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
