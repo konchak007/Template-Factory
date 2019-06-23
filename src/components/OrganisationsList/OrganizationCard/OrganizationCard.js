@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const OrganizationCard = ({  name, avatar }) => {
+const OrganizationCard = ({ name, avatar }) => {
   return (
     <Link to={`/organisation/${name}`}>
       <div>

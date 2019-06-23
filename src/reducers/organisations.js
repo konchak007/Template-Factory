@@ -23,21 +23,21 @@ const OrganisationsReducer = (state = initialState, action) => {
           isLoading: false
         }
       };
-      case types.REMOVE_CURRENT_ORGAISATION:
-        return {
-          ...state,
-          currentOrganisation: {
-            ...initialState.currentOrganisation
-          }
-        };
-        case types.SET_LOADING_STATUS:
-          return{
-            ...state,
-            currentOrganisation: {
-              ...state.currentOrganisation,
-              isLoading: action.payload
-            }
-          }
+    case types.REMOVE_CURRENT_ORGAISATION:
+      return {
+        ...state,
+        currentOrganisation: {
+          ...initialState.currentOrganisation
+        }
+      };
+    case types.SET_LOADING_STATUS:
+      return {
+        ...state,
+        currentOrganisation: {
+          ...state.currentOrganisation,
+          isLoading: action.payload
+        }
+      };
   }
   return state;
 };

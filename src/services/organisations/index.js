@@ -12,24 +12,22 @@ export const fetchOrganisationsByQueryService = async (qwery = "") => {
   }
 };
 
-export const fetchOrganisationMembersByNameService = async (name) => {
+export const fetchOrganisationMembersByNameService = async name => {
   try {
-    const response = await axios(
-      `https://api.github.com/orgs/${name}/members`
-    );
+    const response = await axios(`https://api.github.com/orgs/${name}/members`);
     return response.data;
   } catch (error) {
     return [];
   }
 };
 
-export const fetchOrganisationByNameService = async (name) => {
+export const fetchOrganisationByNameService = async name => {
   try {
-    const response = await axios(
-      `https://api.github.com/orgs/${name}`
+    const response = await axios(`https://api.github.com/orgs/${name}`);
+    const organisationData = response.data;
+    organisationData.members = await fetchOrganisationMembersByNameService(
+      name
     );
-    const organisationData =  response.data;
-    organisationData.members = await fetchOrganisationMembersByNameService(name);
 
     return organisationData;
   } catch (error) {

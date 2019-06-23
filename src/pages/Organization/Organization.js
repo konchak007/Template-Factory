@@ -1,8 +1,9 @@
 import React from "react";
-import {connect } from 'react-redux'
+import { connect } from "react-redux";
 
-import { fetchOrganisationByName } from '../../actions/organisations';
-import  OrganisationInfo from '../../components/OrganisationInfo'
+import { fetchOrganisationByName } from "../../actions/organisations";
+import OrganisationInfo from "../../components/OrganisationInfo";
+import { Spinner } from 'reactstrap';
 
 class Organization extends React.Component {
   componentDidMount() {
@@ -10,27 +11,30 @@ class Organization extends React.Component {
 
     fetchOrganisationByName(name);
   }
+  componentWillUnmount() {
+
+  }
   render() {
     const { isLoading, data } = this.props;
 
     if (isLoading) {
-      return 'Loading...';
+      return <Spinner type="grow" color="primary" />;
     }
     if (!isLoading && !data) {
-      return '404';
+      return "404";
     }
-console.log(data)
+    console.log(data);
     return <OrganisationInfo {...data} />;
   }
 }
 
-const mapStateToProps = (state, props) =>({
+const mapStateToProps = (state, props) => ({
   ...state.organisations.currentOrganisation,
   name: props.match.params.name
-})
+});
 
 const mapDispatchToProps = {
   fetchOrganisationByName
-}
+};
 
-export default connect(mapStateToProps,  mapDispatchToProps)(Organization);
+export default connect(mapStateToProps,mapDispatchToProps)(Organization);
