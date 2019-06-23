@@ -1,3 +1,2 @@
-const Search = () => 'Search';
+export { default } from './Search';
 
-export default Search;
