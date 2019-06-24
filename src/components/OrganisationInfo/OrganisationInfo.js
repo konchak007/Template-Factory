@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import UserCard from "./../UserCard/UserCard";
 
 const OrganisationInfo = ({
   name,
@@ -15,12 +15,7 @@ const OrganisationInfo = ({
     <h1>Members:</h1>
 
     {members.map(user => (
-      <Link to={`/profile/${user.login}`}>
-        <div key={user.id}>
-          <div>{user.login}</div>
-          <img src={user.avatar_url} width="50" height="50" />
-        </div>
-      </Link>
+        <UserCard key={user.id} avatar={user.avatar_url} login={user.login} />
     ))}
   </div>
 );

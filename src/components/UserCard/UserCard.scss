@@ -1,0 +1,20 @@
+.user-card{
+    $img-size: 50px;
+
+    color: rgba(black, 0.8) !important;
+    font-weight: bold;
+    border-bottom: 1px solid #e1e4e8!important;
+    transition: background 0.1s ease;
+
+    img {
+        height: $img-size;
+        width: $img-size;
+        margin: 15px 10px;
+
+        border-radius: 5px;
+    }
+
+    &:hover {
+        background: rgba(black, 0.05);
+    }
+}
