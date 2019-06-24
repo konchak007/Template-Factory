@@ -1,6 +1,7 @@
-import React from 'react'
-import { connect } from 'react-redux';
-import {fetchUser} from '../../actions/users'
+import React from "react";
+import { connect } from "react-redux";
+import { fetchUser } from "../../actions/users";
+import { Spinner } from "reactstrap";
 
 class User extends React.Component {
   componentDidMount() {
@@ -10,17 +11,14 @@ class User extends React.Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, isLoading } = this.props;
 
-    // if (isLoading) {
-    //   return <Spinner type="grow" color="primary" />;
-    // }
-    // if (!isLoading && !data) {
-    //   return "404";
-    // }
-    // console.log(data);
-
-    if (!user) return 'Юзера нема'
+    if (isLoading) {
+      return <Spinner type="grow" color="primary" />;
+    }
+    if (!isLoading && !user) {
+      return "404";
+    }
 
     return <img src={user.avatar_url} />;
   }
@@ -28,12 +26,18 @@ class User extends React.Component {
 
 const mapStateToProps = (state, props) => ({
   user: state.user.data || {},
+  isLoading: state.user.loadingStatus,
   name: props.match.params.name
 });
 
 const mapDispatchToProps = {
   fetchUser
 };
+
+// const mapDispatchToProps = dispatch => ({
+// fetchUser: () => dispatch(fetchUser())
+// fetchUser: bindActionCreators(fetchUser, dispatch)
+// })
 
 export default connect(
   mapStateToProps,

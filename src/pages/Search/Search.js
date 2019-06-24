@@ -14,6 +14,7 @@ class Search extends React.Component {
     return (
       <div>
         <DelayInput
+          className="form-control"
           minLength={2}
           delayTimeout={500}
           onChange={event => this.props.fetchDataByQuery(event.target.value)}
