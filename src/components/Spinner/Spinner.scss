@@ -1,0 +1,11 @@
+.spinner {
+    $size: 200px;
+  
+    position: relative;
+    height: $size !important;
+    width: $size !important;
+    top: - ($size / 2);
+    left: - ($size / 2);
+    margin-left: 50%;
+    margin-top: 50vh;
+  }

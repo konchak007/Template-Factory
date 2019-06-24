@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './OrganisationCard.scss'
+import "./OrganisationCard.scss";
 
 const OrganizationCard = ({ name, avatar }) => {
   return (

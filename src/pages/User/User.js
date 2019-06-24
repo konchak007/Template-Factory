@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../../actions/users";
-import { Spinner } from "reactstrap";
+import Spinner from "../../components/Spinner";
 
 class User extends React.Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class User extends React.Component {
     const { user, isLoading } = this.props;
 
     if (isLoading) {
-      return <Spinner type="grow" color="primary" />;
+      return <Spinner />;
     }
     if (!isLoading && !user) {
       return "404";

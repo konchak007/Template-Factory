@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { fetchOrganisationByName } from "../../actions/organisations";
 import OrganisationInfo from "../../components/OrganisationInfo";
-import { Spinner } from "reactstrap";
+import Spinner from "../../components/Spinner";
 
 class Organization extends React.Component {
   componentDidMount() {
@@ -16,7 +16,7 @@ class Organization extends React.Component {
     const { isLoading, data } = this.props;
 
     if (isLoading) {
-      return <Spinner type="grow" color="primary" />;
+      return <Spinner />;
     }
     if (!isLoading && !data) {
       return "404";
