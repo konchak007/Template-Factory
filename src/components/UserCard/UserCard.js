@@ -1,22 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './UserCard.scss';
+import "./UserCard.scss";
+import { withPreventingEvent }  from '../../utils';
 
-const f = e => e.stopPropagation();
-
-const UserCard = ({avatar,login}) => (
+const UserCard = ({ avatar, login }) => (
   <Link to={`/profile/${login}`}>
     <div class="d-flex justify-content-start user-card ">
-      <img src={avatar}width="50" height="50" />
-      <div>
+      <img src={avatar} width="50" height="50" />
+      <div className="d-flex flex-column justify-content-center">
         <div>{login}</div>
-        <div onClick={(e) => {
-          e.stopPropagation();
-          e.preventDefault();
-          window.open(`https://github.com/${login}?tab=followers`)
-        } }>
-          {/* <a onClick={f} href={} rel="noopener noreferrer" target="_blank">Followers</a> */}
-          Followers
+        <div>
+          <span
+            className="link mr-3"
+            onClick={withPreventingEvent(() => window.open(`https://github.com/${login}?tab=followers`))}
+          >
+            Followers
+          </span>
+          <span
+            className="link"
+            onClick={withPreventingEvent(() => window.open(`https://github.com/${login}?tab=following`))}
+          >
+            Following
+          </span>
         </div>
       </div>
     </div>
