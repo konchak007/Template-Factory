@@ -1,10 +1,16 @@
 .search-container {
-    padding: 29px;
+    height: 70px;
+    background-color: #24292e;
+    display: flex;
+    
    
-
     
 }
 .form-control{
     background-color: #3d4246 !important;
     color: #fff !important;
+    width: 70% !important;
+    border: none !important;
+
 }
+

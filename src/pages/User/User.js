@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../../actions/users";
 import Spinner from "../../components/Spinner";
-import UserPage from '../../components/UserPage';
+import UserPage from "../../components/UserPage";
 
 class User extends React.Component {
   componentDidMount() {
@@ -20,10 +20,19 @@ class User extends React.Component {
     if (!isLoading && !user) {
       return "404";
     }
-console.log(user)
+    console.log(user);
     return (
-    <UserPage avatar={user.avatar_url} key={user.id}name={user.name} location={user.location}
-    biography={user.bio} login={user.login}repos={user.public_repos} company={user.company} />);
+      <UserPage
+        avatar={user.avatar_url}
+        key={user.id}
+        name={user.name}
+        location={user.location}
+        biography={user.bio}
+        login={user.login}
+        repos={user.public_repos}
+        company={user.company}
+      />
+    );
   }
 }
 

@@ -7,17 +7,19 @@ import OrganisationsList from "../../components/OrganisationsList";
 import { fetchDataByQuery } from "../../actions/organisations";
 import "./Search.scss";
 
+
 class Search extends React.Component {
   componentDidMount() {
     this.props.fetchDataByQuery();
   }
   render() {
     return (
-      <div className="search-container">
-        <header>
-          <div className="input-background">
+      <div>
+        <header >
+          <img src={logo}/>
+          <div className="search-container">
             <DelayInput
-              className="form-control mb-4"
+              className="form-control "
               minLength={2}
               delayTimeout={500}
               onChange={event =>

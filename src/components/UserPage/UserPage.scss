@@ -1,0 +1,28 @@
+.user-page{
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #e1e4e8;
+    padding: 20px;
+    img{
+        $size-image:30vw;
+        width: $size-image;
+        height: $size-image;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+       
+    }
+    
+}
+.user-page:hover{
+    border-top: #e36209 3px solid; 
+}
+
+.user-info{
+    font-size:32px;
+    font-weight: 900;
+    text-align: center;
+
+    
+}
