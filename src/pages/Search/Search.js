@@ -15,16 +15,18 @@ class Search extends React.Component {
     return (
       <div className="search-container">
         <header>
-        <div className="input-background" >
-          <DelayInput
-            className="form-control mb-4"
-            minLength={2}
-            delayTimeout={500}
-            onChange={event => this.props.fetchDataByQuery(event.target.value)}
-          /></div>
-          </header>
-          <OrganisationsList organisations={this.props.organisations} />
-
+          <div className="input-background">
+            <DelayInput
+              className="form-control mb-4"
+              minLength={2}
+              delayTimeout={500}
+              onChange={event =>
+                this.props.fetchDataByQuery(event.target.value)
+              }
+            />
+          </div>
+        </header>
+        <OrganisationsList organisations={this.props.organisations} />
       </div>
     );
   }
@@ -41,4 +43,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Search);
-

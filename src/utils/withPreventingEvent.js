@@ -1,5 +1,3 @@
-
-
 const withPreventingEvent = func => event => {
   if (event) {
     event.preventDefault();
@@ -7,6 +5,6 @@ const withPreventingEvent = func => event => {
   }
 
   return func(event);
-}
+};
 
-export default withPreventingEvent
+export default withPreventingEvent;

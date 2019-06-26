@@ -1,5 +1,3 @@
-import withPreventingEvent from './withPreventingEvent';
+import withPreventingEvent from "./withPreventingEvent";
 
-export {
-  withPreventingEvent
-};
+export { withPreventingEvent };

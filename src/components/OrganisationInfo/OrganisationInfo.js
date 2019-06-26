@@ -1,6 +1,6 @@
 import React from "react";
 import UserCard from "./../UserCard/UserCard";
-import './OrganisationInfo.scss'
+import "./OrganisationInfo.scss";
 
 const OrganisationInfo = ({
   name,
@@ -9,15 +9,14 @@ const OrganisationInfo = ({
   description,
   members
 }) => (
-  <div >
+  <div>
     <div className="organisation-info">
-     <img src={avatar_url} />
-     <div className="m-3" >
-       {<div> {name} </div>|| <div> Login: {login}</div>}
-       {description && <div> {description}</div>}
-     </div>
-</div>
-
+      <img src={avatar_url} />
+      <div className="m-3">
+        {<div> {name} </div> || <div> Login: {login}</div>}
+        {description && <div> {description}</div>}
+      </div>
+    </div>
 
     <h4>Members </h4>
 
@@ -25,7 +24,6 @@ const OrganisationInfo = ({
       <UserCard key={user.id} avatar={user.avatar_url} login={user.login} />
     ))}
   </div>
-
 );
 
 export default OrganisationInfo;
