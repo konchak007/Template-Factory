@@ -1,5 +1,6 @@
 .user-page{
     display: flex;
+    flex-wrap: wrap;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border: 1px solid #e1e4e8;
@@ -21,25 +22,26 @@
 .user-info{
     font-weight: 900;
     text-align: left;
+    
 }
 .p-3{
-    flex-grow: 2;
-
+    flex-grow: 1;
     img{
         width: 15px;
         height: 15px;;
     }
-    align-items: center;
+       
 }
 .repositories-container{
     div{
-        
         border: 1px solid #e1e4e8;
-         border-top: #e36209 2px solid; 
-         padding: 5px;
-         border-top-left-radius: 3px;
+        border-top: #e36209 2px solid; 
+        padding: 10px;
+        border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        
-            font-weight: bold;
+        font-weight: bold !important;
         }
     }
+.font-weight{
+    font-weight: 200 !important;
+}

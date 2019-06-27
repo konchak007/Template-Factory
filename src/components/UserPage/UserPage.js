@@ -14,20 +14,20 @@ const UserPage = ({
     <div className="user-info">
       <img src={avatar} alt="avatar" />
       <div>{name}</div>
-      <div>{login}</div>
+      <div className="font-weight">{login}</div>
     </div>
     <div className="p-3">
-      <div>
         <img src={require("../../images/placeholder.png")} alt="location" />
         {location}
-      </div>
       <div>
-        <span>Biography:</span>
-        {biography}
+        Biography:<span className="font-weight">{biography}</span>
       </div>
-      <div><span>Company :</span>{company}</div>
+      <div>Company :
+        <span className="font-weight">{company}
+        </span>
+      </div>
     </div>
-    <div className="repositories-container">
+    <div className="repositories-container m-3">
       <div>Public repositories :{repos}</div>
     </div>
   </div>
