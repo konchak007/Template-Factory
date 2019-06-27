@@ -8,7 +8,6 @@ import Spinner from "../../components/Spinner";
 class Organization extends React.Component {
   componentDidMount() {
     const { fetchOrganisationByName, name } = this.props;
-
     fetchOrganisationByName(name);
   }
   componentWillUnmount() {}
@@ -21,7 +20,6 @@ class Organization extends React.Component {
     if (!isLoading && !data) {
       return "404";
     }
-    console.log(data);
     return <OrganisationInfo {...data} />;
   }
 }

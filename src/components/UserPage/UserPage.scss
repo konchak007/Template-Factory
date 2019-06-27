@@ -3,8 +3,9 @@
     border-radius: 3px;
     border: 1px solid #e1e4e8;
     padding: 20px;
+    border-top: #24292e 3px solid; 
     img{
-        $size-image:30vw;
+        $size-image:20vw;
         width: $size-image;
         height: $size-image;
         border-bottom-left-radius: 0;
@@ -20,9 +21,18 @@
 }
 
 .user-info{
-    font-size:32px;
+    font-size:20px;
     font-weight: 900;
-    text-align: center;
+    text-align: left;
+}
 
+.p-3{
+    img{
+        width: 15px;
+        height: 15px;;
+    }
+}
+
+.repositories-container{
     
 }

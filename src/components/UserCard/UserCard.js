@@ -6,7 +6,7 @@ import { withPreventingEvent } from "../../utils";
 const UserCard = ({ avatar, login }) => (
   <Link to={`/profile/${login}`}>
     <div class="d-flex justify-content-start user-card ">
-      <img src={avatar} width="50" height="50" />
+      <img src={avatar} alt="avatar"  />
       <div className="d-flex flex-column justify-content-center">
         <div>{login}</div>
         <div>

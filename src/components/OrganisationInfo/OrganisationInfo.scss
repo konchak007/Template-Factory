@@ -1,6 +1,9 @@
 .organisation-info{
-     display: flex;
-     
+   border-radius: 3px;
+   border: 1.5px solid #e1e4e8;
+   display: flex;
+   border-top: #495057;
+  
      img{
         $img-size: 150px;
         height: $img-size;
@@ -9,11 +12,14 @@
      }
 }
 
+
 .m-3 :first-child{
-      font-size: 50px;
       font-weight: 400 !important;
+      font-size: calc(25px + 1vw);
    }
 
    :last-child{
       font-weight: 200 !important;
+      font-size: calc(5px + 1vw);
    }
+   

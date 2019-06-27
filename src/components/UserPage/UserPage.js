@@ -12,16 +12,19 @@ const UserPage = ({
 }) => (
   <div className="user-page m-4">
     <div className="user-info">
-    <img src={avatar} />
-    <div>{name}</div>
+      <img src={avatar} alt="avatar"/>
+      <div>{name}</div>
+       <div>{login}</div>
     </div>
     <div className="p-3">
-    <div>Login :{login}</div>
-    <div>{location}</div>
-    <div>{biography}</div>
-    <div>Public repositories :{repos}</div>
-    <div>Company :{company}</div>
+      <div>
+      <img src={require('../../images/placeholder.png')} alt="location"/>{location}</div>
+      <div><span>Biography:</span>{biography}</div>
+      <div>Company :{company}</div>
     </div>
+    <div className="repositories-container">
+      <div>Public repositories :{repos}</div>
+      </div>
   </div>
 );
 

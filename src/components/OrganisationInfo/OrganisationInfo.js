@@ -11,11 +11,12 @@ const OrganisationInfo = ({
 }) => (
   <div>
     <div className="organisation-info">
-      <img src={avatar_url} />
+      <img src={avatar_url} alt="organisation-logo" />
       <div className="m-3">
-        {<div> {name} </div> || <div> Login: {login}</div>}
+        <div> {name|| login}</div>
         {description && <div> {description}</div>}
       </div>
+
     </div>
 
     <h4>Members </h4>

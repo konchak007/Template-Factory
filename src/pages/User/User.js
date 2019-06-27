@@ -20,7 +20,6 @@ class User extends React.Component {
     if (!isLoading && !user) {
       return "404";
     }
-    console.log(user);
     return (
       <UserPage
         avatar={user.avatar_url}
