@@ -1,6 +1,7 @@
 .user-page{
     display: flex;
-    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     border: 1px solid #e1e4e8;
     padding: 20px;
     border-top: #24292e 3px solid; 
@@ -12,27 +13,33 @@
         border-bottom-right-radius: 0;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-       
     }
-    
 }
 .user-page:hover{
-    border-top: #e36209 3px solid; 
+    border-top: #e36209 2px solid; 
 }
-
 .user-info{
-    font-size:20px;
     font-weight: 900;
     text-align: left;
 }
-
 .p-3{
+    flex-grow: 2;
+
     img{
         width: 15px;
         height: 15px;;
     }
+    align-items: center;
 }
-
 .repositories-container{
-    
-}
+    div{
+        
+        border: 1px solid #e1e4e8;
+         border-top: #e36209 2px solid; 
+         padding: 5px;
+         border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+            font-weight: bold;
+        }
+    }

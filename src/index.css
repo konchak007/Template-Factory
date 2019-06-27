@@ -1,5 +1,4 @@
 body {
-
   margin: 0;
   font-family: 'Lato', sans-serif;
   color: #24292e;
@@ -19,6 +18,10 @@ a {
    border-bottom:1px solid #e1e4e8;
    color: white;
    background-color: #24292e ;
+   margin: 0 !important;
   
  }
  
+span{
+  font-weight: bold !important;
+}

@@ -7,8 +7,6 @@ import OrganisationsList from "../../components/OrganisationsList";
 import { fetchDataByQuery } from "../../actions/organisations";
 import "./Search.scss";
 
-
-
 class Search extends React.Component {
   componentDidMount() {
     this.props.fetchDataByQuery();
@@ -18,7 +16,7 @@ class Search extends React.Component {
       <div>
         <header>
           <div className="search-container">
-             <img src={require('../../images/github.png')} alt="logo"/ >
+            <img src={require("../../images/github.png")} alt="logo" />
             <DelayInput
               className="form-control "
               minLength={2}
