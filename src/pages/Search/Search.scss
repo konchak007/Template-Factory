@@ -1,0 +1,25 @@
+.search-container {
+    height: 70px;
+    background-color: #24292e;
+    display: flex;
+    align-items: center;
+    padding-left:12px; 
+   
+   
+    img{
+        $size:35px;
+        width: $size;
+        height: $size;
+        background-color:  #24292e;
+        margin: 10px;
+        
+    }
+}
+.form-control{
+    background-color: #3d4246 !important;
+    color: #fff !important;
+    width: 70% !important;
+    border: none !important; 
+    
+}
+

@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import OrganisationsList from "../../components/OrganisationsList";
 
 import { fetchDataByQuery } from "../../actions/organisations";
+import "./Search.scss";
 
 class Search extends React.Component {
   componentDidMount() {
@@ -13,11 +14,19 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <DelayInput
-          minLength={2}
-          delayTimeout={500}
-          onChange={event => this.props.fetchDataByQuery(event.target.value)}
-        />
+        <header>
+          <div className="search-container">
+            <img src={require("../../images/github.png")} alt="logo" />
+            <DelayInput
+              className="form-control "
+              minLength={2}
+              delayTimeout={500}
+              onChange={event =>
+                this.props.fetchDataByQuery(event.target.value)
+              }
+            />
+          </div>
+        </header>
         <OrganisationsList organisations={this.props.organisations} />
       </div>
     );

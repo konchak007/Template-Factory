@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import UserCard from "./../UserCard/UserCard";
+import "./OrganisationInfo.scss";
 
 const OrganisationInfo = ({
   name,
@@ -9,18 +10,18 @@ const OrganisationInfo = ({
   members
 }) => (
   <div>
-    <div>{name || login}</div>
-    <img src={avatar_url} />
-    {description && <div>Description: {description}</div>}
-    <h1>Members:</h1>
+    <div className="organisation-info">
+      <img src={avatar_url} alt="organisation-logo" />
+      <div className="m-3">
+        <div> {name || login}</div>
+        {description && <div> {description}</div>}
+      </div>
+    </div>
+
+    <h4>Members </h4>
 
     {members.map(user => (
-      <Link to={`/profile/${user.login}`}>
-        <div key={user.id}>
-          <div>{user.login}</div>
-          <img src={user.avatar_url} width="50" height="50" />
-        </div>
-      </Link>
+      <UserCard key={user.id} avatar={user.avatar_url} login={user.login} />
     ))}
   </div>
 );
