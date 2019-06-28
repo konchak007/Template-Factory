@@ -1,27 +1,24 @@
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #24292e;
   font-weight: bold;
-
 }
 
 a {
   color: inherit; /* blue colors for links too */
-  text-decoration: inherit !important;
-  ; /* no underline */
+  text-decoration: inherit !important; /* no underline */
 }
- h4{
-   font-weight:bold;
-   padding: 13px;
-   border-radius: 3px;
-   border-bottom:1px solid #e1e4e8;
-   color: white;
-   background-color: #24292e ;
-   margin: 0 !important;
-  
- }
- 
-span{
+h4 {
+  font-weight: bold;
+  padding: 13px;
+  border-radius: 3px;
+  border-bottom: 1px solid #e1e4e8;
+  color: white;
+  background-color: #24292e;
+  margin: 0 !important;
+}
+
+span {
   font-weight: bold !important;
 }

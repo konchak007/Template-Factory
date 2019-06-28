@@ -1,20 +1,19 @@
+.organisation-card {
+  $img-size: 50px;
+  color: rgba(black, 0.8) !important;
+  border-radius: 3px;
+  border: 0.5px solid #e1e4e8;
+  transition: background 0.1s ease;
+  font-weight: bold;
 
-.organisation-card{
-    $img-size: 50px;
-    color: rgba(black, 0.8) !important;
-    border-radius: 3px;
-    border:0.5px solid #e1e4e8;
-    transition: background 0.1s ease;
-    font-weight: bold ;
+  img {
+    height: $img-size;
+    width: $img-size;
+    margin: 15px 10px;
+    border-radius: 5px;
+  }
 
-    img {
-        height: $img-size;
-        width: $img-size;
-        margin: 15px 10px;
-        border-radius: 5px;
-    }
-
-    &:hover {
-        background: rgba(black, 0.05);
-    }
+  &:hover {
+    background: rgba(black, 0.05);
+  }
 }
