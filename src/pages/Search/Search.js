@@ -1,6 +1,7 @@
 import React from "react";
 import { DelayInput } from "react-delay-input";
 import { connect } from "react-redux";
+import githubIcon from '../../images/github.png';
 
 import OrganisationsList from "../../components/OrganisationsList";
 
@@ -16,7 +17,7 @@ class Search extends React.Component {
       <div>
         <header>
           <div className="search-container">
-            <img src={require("../../images/github.png")} alt="logo" />
+            <img src={githubIcon} alt="logo" />
             <DelayInput
               className="form-control "
               minLength={2}
