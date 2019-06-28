@@ -10,7 +10,7 @@ class Organization extends React.Component {
     const { fetchOrganisationByName, name } = this.props;
     fetchOrganisationByName(name);
   }
-  componentWillUnmount() {}
+
   render() {
     const { isLoading, data } = this.props;
 

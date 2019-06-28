@@ -1,5 +1,6 @@
 import React from "react";
 import "./UserPage.scss";
+import locationIcon from "../../images/placeholder.png";
 
 const UserPage = ({
   avatar,
@@ -17,10 +18,11 @@ const UserPage = ({
       <div className="font-weight">{login}</div>
     </div>
     <div className="p-3">
-      <img src={require("../../images/placeholder.png")} alt="location" />
+      <img src={locationIcon} alt="location" />
       {location}
       <div>
-        Biography:<span className="font-weight">{biography}</span>
+        Biography:
+        <span className="font-weight">{biography}</span>
       </div>
       <div>
         Company :<span className="font-weight">{company}</span>

@@ -1,6 +1,7 @@
 import React from "react";
 import { DelayInput } from "react-delay-input";
 import { connect } from "react-redux";
+import githubIcon from "../../images/github.png";
 
 import OrganisationsList from "../../components/OrganisationsList";
 
@@ -9,25 +10,26 @@ import "./Search.scss";
 
 class Search extends React.Component {
   componentDidMount() {
-    this.props.fetchDataByQuery();
+    const { fetchDataByQuery } = this.props;
+    fetchDataByQuery();
   }
+
   render() {
+    const { fetchDataByQuery, organisations } = this.props;
     return (
       <div>
         <header>
           <div className="search-container">
-            <img src={require("../../images/github.png")} alt="logo" />
+            <img src={githubIcon} alt="logo" />
             <DelayInput
               className="form-control "
               minLength={2}
               delayTimeout={500}
-              onChange={event =>
-                this.props.fetchDataByQuery(event.target.value)
-              }
+              onChange={event => fetchDataByQuery(event.target.value)}
             />
           </div>
         </header>
-        <OrganisationsList organisations={this.props.organisations} />
+        <OrganisationsList organisations={organisations} />
       </div>
     );
   }
