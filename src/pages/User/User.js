@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { fetchUser } from "../../actions/users";
 import Spinner from "../../components/Spinner";
 import UserPage from "../../components/UserPage";
@@ -35,6 +36,13 @@ class User extends React.Component {
     );
   }
 }
+
+User.propTypes = {
+  user: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  fetchUser: PropTypes.func.isRequired
+};
 
 const mapStateToProps = (state, props) => ({
   user: state.user.data || {},

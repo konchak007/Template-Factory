@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./UserPage.scss";
 import locationIcon from "../../images/placeholder.png";
 
@@ -33,5 +34,24 @@ const UserPage = ({
     </div>
   </div>
 );
+UserPage.propTypes = {
+  name: PropTypes.string,
+  avatar: PropTypes.string,
+  location: PropTypes.string,
+  biography: PropTypes.string,
+  login: PropTypes.string,
+  repos: PropTypes.number,
+  company: PropTypes.number
+};
+
+UserPage.defaultProps = {
+  name: null,
+  avatar: null,
+  location: null,
+  biography: null,
+  login: null,
+  repos: null,
+  company: null
+};
 
 export default UserPage;
