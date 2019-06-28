@@ -38,8 +38,9 @@ const OrganisationsReducer = (state = initialState, action) => {
           isLoading: action.payload
         }
       };
+    default:
+      return state;
   }
-  return state;
 };
 
 export default OrganisationsReducer;

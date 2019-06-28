@@ -21,7 +21,8 @@ const UserPage = ({
       <img src={locationIcon} alt="location" />
       {location}
       <div>
-        Biography:<span className="font-weight">{biography}</span>
+        Biography:
+        <span className="font-weight">{biography}</span>
       </div>
       <div>
         Company :<span className="font-weight">{company}</span>
