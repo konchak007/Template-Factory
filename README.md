@@ -29,3 +29,9 @@ Uses prettier package to prettify your code.<br>
 ### `yarn deploy`
 
 Deploy the project into Github Pages.<br>
+
+### `yarn lint`
+
+Run ESlint.
+
+
