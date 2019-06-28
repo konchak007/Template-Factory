@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import PropTypes from "prop-types";
 import { fetchOrganisationByName } from "../../actions/organisations";
 import OrganisationInfo from "../../components/OrganisationInfo";
 import Spinner from "../../components/Spinner";
@@ -23,6 +23,17 @@ class Organization extends React.Component {
     return <OrganisationInfo {...data} />;
   }
 }
+
+Organization.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  data: PropTypes.object,
+  fetchOrganisationByName: PropTypes.func.isRequired
+};
+
+Organization.defaultProps = {
+  data: null
+};
 
 const mapStateToProps = (state, props) => ({
   ...state.organisations.currentOrganisation,

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import UserCard from "../UserCard/UserCard";
 import "./OrganisationInfo.scss";
 
@@ -25,5 +26,17 @@ const OrganisationInfo = ({
     ))}
   </div>
 );
+
+OrganisationInfo.propTypes = {
+  login: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  avatar_url: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  members: PropTypes.array.isRequired
+};
+OrganisationInfo.defaultProps = {
+  name: null,
+  description: null
+};
 
 export default OrganisationInfo;

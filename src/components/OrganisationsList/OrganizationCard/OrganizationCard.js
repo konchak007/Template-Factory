@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./OrganisationCard.scss";
 
 const OrganizationCard = ({ name, avatar }) => (
@@ -10,4 +11,10 @@ const OrganizationCard = ({ name, avatar }) => (
     </div>
   </Link>
 );
+
+OrganizationCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired
+};
+
 export default OrganizationCard;

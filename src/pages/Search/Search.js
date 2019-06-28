@@ -1,6 +1,7 @@
 import React from "react";
 import { DelayInput } from "react-delay-input";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import githubIcon from "../../images/github.png";
 
 import OrganisationsList from "../../components/OrganisationsList";
@@ -34,6 +35,12 @@ class Search extends React.Component {
     );
   }
 }
+
+Search.propTypes = {
+  fetchDataByQuery: PropTypes.func.isRequired,
+  organisations: PropTypes.array.isRequired
+};
+
 const mapStateToProps = state => ({
   organisations: state.organisations.data
 });

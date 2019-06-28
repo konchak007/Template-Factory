@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./UserCard.scss";
 import { withPreventingEvent } from "../../utils";
 
@@ -31,5 +32,10 @@ const UserCard = ({ avatar, login }) => (
     </div>
   </Link>
 );
+
+UserCard.propTypes = {
+  login: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired
+};
 
 export default UserCard;
