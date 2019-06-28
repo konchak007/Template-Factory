@@ -26,6 +26,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Uses prettier package to prettify your code.<br>
 
-###`yarn deploy`
+### `yarn deploy`
 
 Deploy the project into Github Pages.<br>
