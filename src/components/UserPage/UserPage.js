@@ -17,14 +17,13 @@ const UserPage = ({
       <div className="font-weight">{login}</div>
     </div>
     <div className="p-3">
-        <img src={require("../../images/placeholder.png")} alt="location" />
-        {location}
+      <img src={require("../../images/placeholder.png")} alt="location" />
+      {location}
       <div>
         Biography:<span className="font-weight">{biography}</span>
       </div>
-      <div>Company :
-        <span className="font-weight">{company}
-        </span>
+      <div>
+        Company :<span className="font-weight">{company}</span>
       </div>
     </div>
     <div className="repositories-container m-3">
