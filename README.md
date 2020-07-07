@@ -1,3 +1,7 @@
+Work with GitHub API (there you can search organizations , see their info,members etc, also you can view all info about user.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
