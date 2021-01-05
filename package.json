@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://konchak007.github.io/Template-Factory",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "eslint-config-prettier": "^5.0.0",
     "gh-pages": "^2.0.1",
